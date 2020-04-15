@@ -17,6 +17,29 @@
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
+    #box-user {
+      .fa-user-circle {
+        left: 20px;
+        bottom: 40px;
+        font-size: 60px;
+        color: #828282;
+        margin-top: -37px;
+        margin-left: 20px;
+      }
+      #txt-user-circle {
+        font-size: 20px;
+        margin-left: 20px;
+      }
+      .txt-fa-star {
+        margin-left: 100px;
+        color: #828282;
+      }
+      .fa-star {
+        color: #828282;
+        margin-left: -30px;
+      }
+    }
+
   }
   
   #mySidenav a {
@@ -40,6 +63,7 @@
     font-size: 55px;
     margin-left: 50px;
   }
+  
 
   .line {
     margin-left: 15px;

@@ -29,6 +29,12 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
+@import "./assets/fontawesome-free/css/all.min.css";
+
+// @import "../assets/fontawesome-free/scss/solid.scss";
+// @import "../assets/fontawesome-free/scss/brands.scss";
+// @import "../assets/fontawesome-free/scss/fontawesome.scss";
+
 @font-face {
     font-family: 'comfortaa';
     src: url(./assets/comfortaa/Comfortaa-Regular.ttf) format("truetype");
@@ -37,3 +43,4 @@
   body {
     font-family: 'comfortaa';
   }
+
