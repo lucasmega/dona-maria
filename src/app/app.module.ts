@@ -22,16 +22,17 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { RegisterComponent } from './register/register.component';
 
-
 library.add(fas, far, fab);
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
     HeaderComponent,
     FooterComponent,
     SidenavComponent,
