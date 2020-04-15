@@ -1,0 +1,36 @@
+.example-form {
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  #mat-register {
+      width: 130px;
+    color: #fff;
+    background-color: #ee6e73;
+  }
+
+  .row {
+      .col {
+        text-align: center;
+        h2 {
+            margin-top: 40px;
+        }
+        h6 {
+            margin-top: 20px;
+            margin-bottom: 40PX;
+            label {
+                color: #0645ad;
+            }
+        }
+      }
+  }
+
+  img {
+      width: 40px;
+  }
+  

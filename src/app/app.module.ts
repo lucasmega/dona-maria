@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -23,6 +25,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { RegisterComponent } from './register/register.component';
 
 
 library.add(fas, far, fab);
@@ -31,7 +34,8 @@ library.add(fas, far, fab);
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    SidenavComponent
+    SidenavComponent,
+    RegisterComponent
   ],
   entryComponents: [],
   imports: [
@@ -39,9 +43,10 @@ library.add(fas, far, fab);
     IonicModule.forRoot(),
     AppRoutingModule,
     BrowserAnimationsModule,
-
-    MatIconModule,
     MatMenuModule,
+    MatIconModule,
+    MatInputModule,
+    MatButtonModule,
     MatSidenavModule,
     FontAwesomeModule
   ],

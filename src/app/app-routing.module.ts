@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+import { RegisterComponent } from './register/register.component';
+
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: '/',
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'register',
     pathMatch: 'full'
   },
   // {
@@ -15,7 +21,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    // RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot( routes, { useHash: true })
   ],
   exports: [RouterModule]
 })
