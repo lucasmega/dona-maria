@@ -1,4 +1,6 @@
 <div class="header" [ngClass]="{'header-over': activeHeaderOver}" id="app-header">
   <h2>Mariaa</h2>
-  <app-sidenav></app-sidenav>
+  <ng-container *ngIf="isSidenav">
+    <app-sidenav></app-sidenav>
+  </ng-container>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { UtilService } from '../service/util.service';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  public isSidenav: boolean;
+
   @Input() activeHeaderOver: boolean;
 
-  constructor() { }
+  constructor(private utilService: UtilService) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.utilService.emitSidenav.subscribe(flag => this.isSidenav = flag);
+  }
 
 
 

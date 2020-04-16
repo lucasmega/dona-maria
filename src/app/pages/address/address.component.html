@@ -1,0 +1,31 @@
+<div>
+  <div>
+    <app-waze></app-waze>
+  </div>
+  <div>
+    <div class="container">
+      <div class="row">
+          <i class="fas fa-chevron-left" (click)="onRegister()"></i>
+        <div class="col">
+          <h2>Solicitação</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h6>Para onde você precisa?</h6>
+        </div>
+      </div>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Cadastrar novo endereço?</mat-label>
+          <input type="text" matInput>
+          <i class="fas fa-plus-circle"></i>
+        </mat-form-field>
+
+        <section>
+          <button mat-raised-button id="mat-category" (click)="onAddress()">Continuar</button>
+        </section>
+      </form>
+    </div>
+  </div>
+</div>

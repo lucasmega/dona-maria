@@ -1,0 +1,55 @@
+.example-form {
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  #mat-category {
+    width: 100%;
+    min-height: 8vh;
+    color: #fff;
+    background-color: #ee6e73;
+  }
+
+  .container {
+    .row {
+        .fa-chevron-left {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .col {
+          text-align: center;
+          h2 {
+              margin-top: 60px;
+          }
+          h6 {
+              margin-top: 20px;
+              margin-bottom: 40PX;
+          }
+        }
+    }
+  }
+
+
+  .fa-plus-circle {
+      display: block;
+      text-align: end;
+      margin-right: 10px;
+      margin-top: -15px;
+  }
+
+  .mat-form-field {
+      min-width: 100%;
+  }
+  section {
+      text-align: center;
+      label {
+          font-size: 15px;
+          color: #0645ad;
+          margin-top: 10px;
+      }
+  }

@@ -1,0 +1,41 @@
+.example-form {
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  #mat-category {
+    width: 100%;
+    min-height: 8vh;
+    color: #fff;
+    background-color: #ee6e73;
+  }
+
+  .row {
+      .col {
+        text-align: center;
+        h2 {
+            margin-top: 40px;
+        }
+        h6 {
+            margin-top: 20px;
+            margin-bottom: 40PX;
+        }
+      }
+  }
+
+  .mat-form-field {
+      min-width: 100%;
+  }
+  section {
+      text-align: center;
+      label {
+          font-size: 15px;
+          color: #0645ad;
+          margin-top: 10px;
+      }
+  }

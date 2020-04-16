@@ -7,6 +7,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
+import { PageModule } from './pages/pages.module';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -41,15 +42,16 @@ library.add(fas, far, fab);
   entryComponents: [],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(),
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatMenuModule,
+    PageModule,
     MatIconModule,
+    MatMenuModule,
     MatInputModule,
     MatButtonModule,
+    AppRoutingModule,
     MatSidenavModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    IonicModule.forRoot(),
+    BrowserAnimationsModule,
   ],
   providers: [
     StatusBar,
