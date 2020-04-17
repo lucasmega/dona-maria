@@ -1,40 +1,30 @@
 <div>
-  <div>
-    <app-waze></app-waze>
-  </div>
-  <div>
-    <div class="container">
-      <div class="row">
-        <i class="fas fa-chevron-left" (click)="onRegister()"></i>
-        <div class="col">
-          <h2>Solicitação</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <h6>Para onde você precisa?</h6>
-        </div>
-      </div>
-      <form class="example-form">
-
-        <mat-list *ngFor="let address of adresses">
-          <mat-list-item (click)="onAddDate()">{{ address }}</mat-list-item>
-          <mat-divider></mat-divider>
-        </mat-list>
-
-        <!-- <p>
-          <mat-form-field>
-            <mat-label>Input disabled</mat-label>
-            <input matInput [matDatepicker]="dp3" disabled>
-            <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
-            <mat-datepicker #dp3 disabled="false"></mat-datepicker>
-          </mat-form-field>
-        </p> -->
-
-        <section>
-          <button mat-raised-button id="mat-category" (click)="onAddAddress()">Cadastrar endereço</button>
-        </section>
-      </form>
+    <div>
+        <app-waze></app-waze>
     </div>
-  </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <i class="fas fa-chevron-left" (click)="onRegister()"></i>
+                <div class="col">
+                    <h2>Solicitação</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h6>Para onde você precisa?</h6>
+                </div>
+            </div>
+            <form class="example-form">
+                <mat-list *ngFor="let address of adresses">
+                    <mat-list-item id="home-address" (click)="onAddDate()">{{ address }}</mat-list-item>
+                    <mat-divider></mat-divider>
+                </mat-list>
+
+                <section>
+                    <button mat-raised-button id="mat-category" (click)="onAddAddress()">Cadastrar endereço</button>
+                </section>
+            </form>
+        </div>
+    </div>
 </div>

@@ -2,33 +2,39 @@
     min-width: 100%;
     max-width: 100%;
     width: 100%;
-  }
-  
-  .example-full-width {
-    width: 100%;
-  }
+}
 
-  #mat-register {
+.example-full-width {
+    width: 100%;
+}
+
+#mat-register {
     width: 100%;
     color: #fff;
     min-height: 8vh;
     background-color: #ee6e73;
-  }
+}
 
-  form {
+form {
     text-align: end;
     label {
-      color: #0645ad;
-      margin-bottom: 40px;
+        color: #0645ad;
+        margin-bottom: 40px;
     }
-  }
+    input#visa {
+        background-image: url('../../../assets/icon/visa.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 30px;
+    }
+}
 
-  .row {
+.row {
     .fa-chevron-left {
-      font-size: 20px;
-      margin-top: 20px;
-  }
-      .col {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .col {
         text-align: center;
         h2 {
             margin-top: 40px;
@@ -37,6 +43,5 @@
             margin-top: 20px;
             margin-bottom: 40PX;
         }
-      }
-  }
-  
+    }
+}

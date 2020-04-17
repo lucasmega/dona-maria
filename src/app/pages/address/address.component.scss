@@ -2,60 +2,50 @@
     min-width: 100%;
     max-width: 100%;
     width: 100%;
-  }
-  
-  .example-full-width {
-    width: 100%;
-  }
+}
 
-  #mat-category {
+.example-full-width {
+    width: 100%;
+}
+
+#mat-category {
     width: 80%;
     color: #fff;
     margin-top: 40px;
     min-height: 8vh;
     background-color: #ee6e73;
-  }
-  .container {
+}
+
+.container {
     .row {
         .fa-chevron-left {
             font-size: 20px;
             margin-top: 20px;
         }
         .col {
-          text-align: center;
-          h2 {
-              margin-top: 60px;
-          }
-          h6 {
-              margin-top: 20px;
-              margin-bottom: 40PX;
-          }
+            text-align: center;
+            h2 {
+                margin-top: 60px;
+            }
+            h6 {
+                margin-top: 20px;
+                margin-bottom: 40PX;
+            }
         }
     }
-      .mat-list-item {
+    .mat-list-item {
         overflow: hidden;
         width: auto;
         text-overflow: ellipsis;
         white-space: nowrap;
-      }
     }
-  section {
-      text-align: center;
-      label {
-          font-size: 15px;
-          color: #0645ad;
-          margin-top: 10px;
-      }
-  }
+}
 
-// ::ng-deep.mat-calendar-previous-button {
-//   left: -40px;
-//   position: absolute;
-//   background-color: blue;
-// }
-
-//   ::ng-deep.mat-calendar-next-button {
-//     left: -40px;
-//   position: absolute;
-//   background-color: red;
-// }
+section {
+    text-align: center;
+    label {
+        font-size: 15px;
+        color: #0645ad;
+        margin-top: 10px;
+    }
+}

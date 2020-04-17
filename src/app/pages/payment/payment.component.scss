@@ -21,6 +21,24 @@ form {
         color: #0645ad;
         margin-bottom: 40px;
     }
+    input#visa {
+        background-image: url('../../../assets/icon/visa.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 30px;
+    }
+    input#mastercard {
+        background-image: url('../../../assets/icon/mastercard.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 30px;
+    }
+    input#coin {
+        background-image: url('../../../assets/icon/coin.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 30px;
+    }
 }
 
 .row {
