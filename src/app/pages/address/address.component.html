@@ -18,9 +18,18 @@
       <form class="example-form">
 
         <mat-list *ngFor="let address of adresses">
-          <mat-list-item>{{ address }}</mat-list-item>
+          <mat-list-item (click)="onAddDate()">{{ address }}</mat-list-item>
           <mat-divider></mat-divider>
         </mat-list>
+
+        <!-- <p>
+          <mat-form-field>
+            <mat-label>Input disabled</mat-label>
+            <input matInput [matDatepicker]="dp3" disabled>
+            <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+            <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+          </mat-form-field>
+        </p> -->
 
         <section>
           <button mat-raised-button id="mat-category" (click)="onAddAddress()">Cadastrar endereço</button>

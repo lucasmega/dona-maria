@@ -27,4 +27,8 @@ export class AddressComponent implements OnInit {
     this.router.navigateByUrl('/add-address');
   }
 
+  public onAddDate() {
+    this.router.navigateByUrl('/date');
+  }
+
 }
