@@ -16,4 +16,8 @@ export class ConfirmationComponent implements OnInit {
     this.router.navigateByUrl('/date');
   }
 
+  public onPayment() {
+    this.router.navigateByUrl('/payment');
+  }
+
 }

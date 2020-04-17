@@ -13,6 +13,7 @@ import { PageRoutingModule } from './pages-routing.module';
 
 import { DateComponent } from './date/date.component';
 import { WazeComponent } from '../waze/waze.component';
+import { PaymentComponent } from './payment/payment.component';
 import { AddressComponent } from './address/address.component';
 import { AddAddressComponent } from './add-address/add-address.component';
 import { SolicitationComponent } from './solicitation/solicitation.component';
@@ -33,10 +34,11 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
   declarations: [
     WazeComponent,
     DateComponent,
+    PaymentComponent,
     AddressComponent,
     AddAddressComponent,
     SolicitationComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
   ]
 })
 export class PageModule {}

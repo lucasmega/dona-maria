@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { DateComponent } from './date/date.component';
+import { PaymentComponent } from './payment/payment.component';
 import { AddressComponent } from './address/address.component';
 import { AddAddressComponent } from './add-address/add-address.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { SolicitationComponent } from './solicitation/solicitation.component';
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'confirmation',
     component: ConfirmationComponent
+  },
+  {
+    path: 'payment',
+    component: PaymentComponent
   }
 ];
 

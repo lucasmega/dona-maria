@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <i class="fas fa-chevron-left" (click)="onDate()"></i>
+        <div class="col">
+            <h4>Forma de pagamento</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h6>Escolha uma forma de pagamento</h6>
+        </div>
+    </div>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <mat-label>Final:</mat-label>
+            <input type="text" matInput>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Final:</mat-label>
+            <input type="text" matInput>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Dinheiro:</mat-label>
+            <input type="text" matInput>
+        </mat-form-field>
+
+        <section>
+            <button mat-raised-button id="mat-register" (click)="onAddress()">Adicionar forma de pagamento</button>
+        </section>
+    </form>
+</div>
