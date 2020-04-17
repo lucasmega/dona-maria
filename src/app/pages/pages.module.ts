@@ -16,6 +16,7 @@ import { WazeComponent } from '../waze/waze.component';
 import { AddressComponent } from './address/address.component';
 import { AddAddressComponent } from './add-address/add-address.component';
 import { SolicitationComponent } from './solicitation/solicitation.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { SolicitationComponent } from './solicitation/solicitation.component';
     DateComponent,
     AddressComponent,
     AddAddressComponent,
-    SolicitationComponent
+    SolicitationComponent,
+    ConfirmationComponent
   ]
 })
 export class PageModule {}

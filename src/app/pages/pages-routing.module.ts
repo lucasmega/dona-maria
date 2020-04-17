@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { DateComponent } from './date/date.component';
 import { AddressComponent } from './address/address.component';
 import { AddAddressComponent } from './add-address/add-address.component';
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'date',
     component: DateComponent
+  },
+  {
+    path: 'confirmation',
+    component: ConfirmationComponent
   }
 ];
 

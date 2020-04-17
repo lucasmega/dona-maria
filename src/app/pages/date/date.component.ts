@@ -16,4 +16,8 @@ export class DateComponent implements OnInit {
     this.router.navigateByUrl('/address');
   }
 
+  public onConfirmation() {
+    this.router.navigateByUrl('/confirmation');
+  }
+
 }

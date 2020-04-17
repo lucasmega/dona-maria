@@ -1,0 +1,42 @@
+.example-form {
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  #mat-register {
+    width: 100%;
+    color: #fff;
+    min-height: 8vh;
+    background-color: #ee6e73;
+  }
+
+  form {
+    text-align: end;
+    label {
+      color: #0645ad;
+      margin-bottom: 40px;
+    }
+  }
+
+  .row {
+    .fa-chevron-left {
+      font-size: 20px;
+      margin-top: 20px;
+  }
+      .col {
+        text-align: center;
+        h2 {
+            margin-top: 40px;
+        }
+        h6 {
+            margin-top: 20px;
+            margin-bottom: 40PX;
+        }
+      }
+  }
+  
