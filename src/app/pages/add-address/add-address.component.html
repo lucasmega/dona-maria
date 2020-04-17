@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <i class="fas fa-chevron-left" (click)="onAddress()"></i>
+    <div class="col">
+      <h2>Solicitação</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h6>Cadastre um endereço!</h6>
+    </div>
+  </div>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>CEP:</mat-label>
+      <input type="number" matInput>
+    </mat-form-field>
+    <label>Esqueceu seu CEP?</label>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Rua:</mat-label>
+      <input type="email" matInput>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Número:</mat-label>
+      <input type="password" matInput>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Bairro:</mat-label>
+      <input type="password" matInput>
+    </mat-form-field>
+
+    <section>
+      <button mat-raised-button id="mat-register" (click)="onAddress()">Cadastrar</button>
+    </section>
+  </form>
+</div>

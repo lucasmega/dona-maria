@@ -9,18 +9,22 @@ import { Router } from '@angular/router';
 })
 export class AddressComponent implements OnInit {
 
-  public foods: any[] = [
-    { value: 'steak-0', viewValue: 'Faxineira' },
-    { value: 'pizza-1', viewValue: 'Cozinheira' },
-    { value: 'tacos-2', viewValue: 'Lavadeira' }
+  public adresses: string[] = [
+    'R. Madre Ana Justina, 03, Jd. Shangri-lá',
+    'R. França, 45, Taboão',
+    'R. Amador Bueno, 474, Santo Amaro',
   ];
 
   constructor(private router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   public onRegister() {
     this.router.navigateByUrl('/solicitation');
+  }
+
+  public onAddAddress() {
+    this.router.navigateByUrl('/add-address');
   }
 
 }

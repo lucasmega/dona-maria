@@ -5,7 +5,7 @@
   <div>
     <div class="container">
       <div class="row">
-          <i class="fas fa-chevron-left" (click)="onRegister()"></i>
+        <i class="fas fa-chevron-left" (click)="onRegister()"></i>
         <div class="col">
           <h2>Solicitação</h2>
         </div>
@@ -16,14 +16,14 @@
         </div>
       </div>
       <form class="example-form">
-        <mat-form-field class="example-full-width">
-          <mat-label>Cadastrar novo endereço?</mat-label>
-          <input type="text" matInput>
-          <i class="fas fa-plus-circle"></i>
-        </mat-form-field>
+
+        <mat-list *ngFor="let address of adresses">
+          <mat-list-item>{{ address }}</mat-list-item>
+          <mat-divider></mat-divider>
+        </mat-list>
 
         <section>
-          <button mat-raised-button id="mat-category" (click)="onAddress()">Continuar</button>
+          <button mat-raised-button id="mat-category" (click)="onAddAddress()">Cadastrar endereço</button>
         </section>
       </form>
     </div>
