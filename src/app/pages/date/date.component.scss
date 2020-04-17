@@ -3,9 +3,11 @@
     max-width: 100%;
     width: 100%;
 }
+
 .example-full-width {
     width: 100%;
 }
+
 #mat-category {
     width: 80%;
     color: #fff;
@@ -13,6 +15,7 @@
     min-height: 8vh;
     background-color: #ee6e73;
 }
+
 .container {
     .row {
         .fa-chevron-left {
@@ -20,17 +23,18 @@
             margin-top: 20px;
         }
         .col {
-        text-align: center;
-        h2 {
-            margin-top: 60px;
-        }
-        h6 {
-            margin-top: 20px;
-            margin-bottom: 40PX;
-        }
+            text-align: center;
+            h2 {
+                margin-top: 60px;
+            }
+            h6 {
+                margin-top: 20px;
+                margin-bottom: 40PX;
+            }
         }
     }
 }
+
 section {
     text-align: center;
     label {
@@ -39,21 +43,30 @@ section {
         margin-top: 10px;
     }
 }
+
 form {
     text-align: center;
     .mat-form-field {
         width: 80%;
     }
 }
+
 ::ng-deep.mat-icon-button mat-button-base {
     left: -6px;
     position: relative;
 }
+
 ::ng-deep.mat-calendar-previous-button {
     left: -40px;
     position: absolute;
 }
+
 ::ng-deep.mat-calendar-next-button {
     left: -40px;
     position: absolute;
+}
+
+::ng-deep.mat-datepicker-toggle {
+    right: 20px;
+    position: relative;
 }
