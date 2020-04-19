@@ -11,10 +11,11 @@ import { PageModule } from './pages/pages.module';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -50,6 +51,7 @@ library.add(fas, far, fab);
     AppRoutingModule,
     MatSidenavModule,
     FontAwesomeModule,
+    MatFormFieldModule,
     IonicModule.forRoot(),
     BrowserAnimationsModule,
   ],

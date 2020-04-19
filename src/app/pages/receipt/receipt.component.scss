@@ -1,0 +1,99 @@
+.example-form {
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+}
+
+.txt-form-field {
+    width: 100%;
+}
+
+#mat-register {
+    width: 100%;
+    color: #fff;
+    min-height: 8vh;
+    background-color: #ee6e73;
+}
+
+form {
+    text-align: end;
+    label {
+        color: #0645ad;
+        margin-bottom: 40px;
+    }
+    input#visa {
+        background-image: url('../../../assets/icon/visa.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 30px;
+    }
+}
+
+.row {
+    .fa-chevron-left {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .col {
+        text-align: center;
+        h2 {
+            margin-top: 40px;
+        }
+    }
+}
+
+.example-card {
+    max-width: 400px;
+}
+
+.mat-accordion {
+    .mat-expansion-panel {
+        margin-top: 20px;
+        .mat-divider {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .row {
+            .col-4 {
+                img {
+                    height: 100px;
+                    border-radius: 50%;
+                }
+            }
+            .col-8 {
+                .mat-card-title {
+                    text-transform: uppercase;
+                }
+                img {
+                    height: 10px;
+                }
+            }
+        }
+    }
+}
+
+.mat-card {
+    .mat-card-header {
+        .mat-card-subtitle {
+            span {
+                img {
+                    height: 10px;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+.mat-form-field+.mat-form-field {
+    margin-left: 8px;
+}
+
+#mat-receipt {
+    width: 100%;
+    color: #fff;
+    min-height: 8vh;
+    margin-top: 20px;
+    margin-bottom: 75px;
+    background-color: #ee6e73;
+}

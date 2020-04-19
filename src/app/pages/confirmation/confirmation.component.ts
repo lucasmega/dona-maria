@@ -20,4 +20,8 @@ export class ConfirmationComponent implements OnInit {
     this.router.navigateByUrl('/payment');
   }
 
+  public onReceipt() {
+    this.router.navigateByUrl('/receipt');
+  }
+
 }

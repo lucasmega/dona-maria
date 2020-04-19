@@ -1,0 +1,99 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>Comprovante</h2>
+        </div>
+    </div>
+
+    <mat-accordion>
+        <mat-expansion-panel #mepPartner (click)="toogleExpasionPartner()">
+            <mat-expansion-panel-header>
+                Informações sobre a domestica
+            </mat-expansion-panel-header>
+
+            <mat-divider></mat-divider>
+
+            <div class="row">
+                <div class="col-4">
+                    <img src="../../../assets/icon/user.svg">
+                </div>
+                <div class="col-8">
+                    <div>
+                        <mat-card-title>Faxineira</mat-card-title>
+                    </div>
+                    <div>
+                        <mat-card-subtitle>4.78
+                            <span>
+                          <img src="../../../assets/icon/star.svg">
+                        </span>
+                        </mat-card-subtitle>
+                    </div>
+                </div>
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <div class="row">
+                <div class="container">
+                    <mat-form-field class="txt-form-field">
+                        <mat-label>Serviço:</mat-label>
+                        <input type="text" matInput>
+                    </mat-form-field>
+
+                    <mat-form-field class="txt-form-field">
+                        <mat-label>Endereço:</mat-label>
+                        <input type="text" matInput>
+                    </mat-form-field>
+
+                    <mat-form-field class="txt-form-field">
+                        <mat-label>Data:</mat-label>
+                        <input type="text" matInput>
+                    </mat-form-field>
+
+                    <mat-form-field class="txt-form-field">
+                        <mat-label>Valor:</mat-label>
+                        <input type="number" matInput>
+                    </mat-form-field>
+                </div>
+            </div>
+
+        </mat-expansion-panel>
+    </mat-accordion>
+
+    <mat-accordion>
+        <mat-expansion-panel #mepReceipt (click)="toogleExpasionReceipt()">
+            <mat-expansion-panel-header>
+                Comprovante de pagamento
+            </mat-expansion-panel-header>
+
+            <mat-divider></mat-divider>
+
+            <mat-form-field class="txt-form-field">
+                <mat-label>Serviço:</mat-label>
+                <input type="text" matInput>
+            </mat-form-field>
+
+            <mat-form-field class="txt-form-field">
+                <mat-label>Endereço:</mat-label>
+                <input type="text" matInput>
+            </mat-form-field>
+
+            <mat-form-field class="txt-form-field">
+                <mat-label>Data:</mat-label>
+                <input type="text" matInput>
+            </mat-form-field>
+
+            <mat-form-field class="txt-form-field">
+                <mat-label>Valor:</mat-label>
+                <input type="number" matInput>
+            </mat-form-field>
+
+        </mat-expansion-panel>
+    </mat-accordion>
+
+    <section>
+        <button mat-raised-button id="mat-receipt" (click)="onConclude()">Concluir</button>
+    </section>
+
+
+</div>
