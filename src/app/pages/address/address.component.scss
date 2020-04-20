@@ -39,6 +39,17 @@
         text-overflow: ellipsis;
         white-space: nowrap;
     }
+    form {
+        span {
+            position: absolute;
+            right: 30px;
+            img {
+                left: 100%;
+                height: 30px;
+                position: relative;
+            }
+        }
+    }
 }
 
 section {
