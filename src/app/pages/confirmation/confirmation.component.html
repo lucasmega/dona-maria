@@ -13,22 +13,22 @@
     <form class="example-form">
         <mat-form-field class="example-full-width">
             <mat-label>Serviço:</mat-label>
-            <input type="text" matInput>
+            <input type="text" disabled matInput>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Endereço:</mat-label>
-            <input type="text" matInput>
+            <input type="text" disabled matInput>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Data:</mat-label>
-            <input type="text" matInput>
+            <input type="text" disabled matInput>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Valor:</mat-label>
-            <input type="number" id="visa" matInput>
+            <input type="number" id="{{payment.cardFlag}}" disabled matInput>
         </mat-form-field>
         <label (click)="onPayment()">Alterar forma de pagamento</label>
 

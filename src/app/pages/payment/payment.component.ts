@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { PaymentModel } from '../../model/payment.model';
+import { UtilService, PaymentMockService} from '../../service/export';
+
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
@@ -8,27 +11,13 @@ import { Router } from '@angular/router';
 })
 export class PaymentComponent implements OnInit {
 
-  public payments: Payment[] = [];
+  public payments: PaymentModel[];
 
-
-  constructor(private router: Router) { }
-
-  ngOnInit() {
-    this.payments = [
-      {
-        cardNumber: '6261',
-        typeCard: 'credit-card'
-      },
-      {
-        cardNumber: '8012',
-        typeCard: 'credit-card'
-      },
-      {
-        cardNumber: '',
-        typeCard: 'cash-payment'
-      }
-    ];
+  constructor(private router: Router, private paymentMockService: PaymentMockService, private utilService: UtilService) {
+    this.payments = this.paymentMockService.getPayment();
   }
+
+  ngOnInit() { }
 
   public onDate() {
     this.router.navigateByUrl('/confirmation');
@@ -38,11 +27,9 @@ export class PaymentComponent implements OnInit {
     this.router.navigateByUrl('/add-payment');
   }
 
-  public selectPayment() { }
+  public selectPayment(payment: PaymentModel) {
+    this.utilService.payment(payment);
+    this.router.navigateByUrl('/confirmation');
+  }
 
-}
-
-export interface Payment {
-  cardNumber: string;
-  typeCard: string;
 }

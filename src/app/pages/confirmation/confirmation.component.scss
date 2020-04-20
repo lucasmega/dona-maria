@@ -28,6 +28,18 @@ form {
         background-position: right;
         height: 30px;
     }
+    input#mastercard {
+        background-image: url('../../../assets/icon/mastercard.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 30px;
+    }
+    input#cash-payment {
+        background-image: url('../../../assets/icon/cash-payment.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 30px;
+    }
 }
 
 .row {

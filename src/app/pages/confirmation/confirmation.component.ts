@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { PaymentModel } from '../../model/payment.model';
+
+import { UtilService } from '../../service/export';
+
 @Component({
   selector: 'app-confirmation',
   templateUrl: './confirmation.component.html',
@@ -8,9 +12,13 @@ import { Router } from '@angular/router';
 })
 export class ConfirmationComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  public payment = new PaymentModel();
 
-  ngOnInit() { }
+  constructor(private router: Router, private utilService: UtilService) { }
+
+  ngOnInit() {
+    this.utilService.emitPayment.subscribe(payment => this.payment);
+  }
 
   public onDate() {
     this.router.navigateByUrl('/date');

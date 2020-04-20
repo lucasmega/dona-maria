@@ -13,8 +13,8 @@
     <form class="example-form">
 
         <mat-list *ngFor="let payment of payments">
-            <label>Final:</label>
-            <mat-list-item (click)="selectPayment()">
+            <label>{{ payment.cardNumber ? 'Final' : ''}}</label>
+            <mat-list-item (click)="selectPayment(payment)">
                 {{ payment.cardNumber ? '**** **** **** ' + payment.cardNumber : 'Dinheiro'}}
                 <span><img src="../../../assets/icon/{{payment.typeCard}}.svg"></span>
             </mat-list-item>
