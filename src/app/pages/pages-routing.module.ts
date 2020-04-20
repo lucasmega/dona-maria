@@ -5,6 +5,7 @@ import { DateComponent } from './date/date.component';
 import { ReceiptComponent } from './receipt/receipt.component';
 import { PaymentComponent } from './payment/payment.component';
 import { AddressComponent } from './address/address.component';
+import { AddPaymentComponent } from './add-payment/add-payment.component';
 import { AddAddressComponent } from './add-address/add-address.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { SolicitationComponent } from './solicitation/solicitation.component';
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'receipt',
     component: ReceiptComponent
+  },
+  {
+    path: 'add-payment',
+    component: AddPaymentComponent
   }
 ];
 

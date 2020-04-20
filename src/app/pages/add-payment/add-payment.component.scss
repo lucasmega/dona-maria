@@ -1,14 +1,14 @@
-.example-form {
+.form-add-payment {
     min-width: 100%;
     max-width: 100%;
     width: 100%;
 }
 
-.example-full-width {
+.full-width {
     width: 100%;
 }
 
-#mat-register {
+#button-add-payment {
     width: 100%;
     color: #fff;
     min-height: 8vh;
@@ -28,6 +28,12 @@ form {
         background-position: right;
         height: 30px;
     }
+    input#info {
+        background-image: url('../../../assets/icon/info.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 20px;
+    }
 }
 
 .row {
@@ -37,7 +43,7 @@ form {
     }
     .col {
         text-align: center;
-        h2 {
+        h3 {
             margin-top: 40px;
         }
         h6 {

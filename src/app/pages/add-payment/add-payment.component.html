@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <i class="fas fa-chevron-left" (click)="onPayment()"></i>
+        <div class="col">
+            <h3>Adicione um cartão</h3>
+        </div>
+    </div>
+
+    <form class="form-add-payment">
+        <mat-form-field class="full-width">
+            <mat-label>Número do cartão:</mat-label>
+            <input type="text" id="visa" matInput>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <mat-label>Validade:</mat-label>
+            <input type="text" id="info" matInput>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <mat-label>Data:</mat-label>
+            <input type="text" id="info" matInput>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <mat-label>CVV:</mat-label>
+            <input type="number" id="info" matInput>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <mat-label>País:</mat-label>
+            <input type="text" matInput>
+        </mat-form-field>
+
+        <section>
+            <button mat-raised-button id="button-add-payment" (click)="addPayment()">Adicionar forma de pagamento</button>
+        </section>
+    </form>
+</div>

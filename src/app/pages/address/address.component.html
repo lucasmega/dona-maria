@@ -17,7 +17,7 @@
             </div>
             <form class="example-form">
                 <mat-list *ngFor="let address of adresses">
-                    <mat-list-item id="home-address" (click)="onAddDate()">{{ address }}</mat-list-item>
+                    <mat-list-item (click)="onAddDate()">{{ address }}</mat-list-item>
                     <mat-divider></mat-divider>
                 </mat-list>
 

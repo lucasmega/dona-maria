@@ -11,23 +11,18 @@
         </div>
     </div>
     <form class="example-form">
-        <mat-form-field class="example-full-width">
-            <mat-label>Final:</mat-label>
-            <input type="text" id="visa" matInput>
-        </mat-form-field>
 
-        <mat-form-field class="example-full-width">
-            <mat-label>Final:</mat-label>
-            <input type="text" id="mastercard" matInput>
-        </mat-form-field>
-
-        <mat-form-field class="example-full-width">
-            <mat-label>Dinheiro:</mat-label>
-            <input type="text" id="coin" matInput>
-        </mat-form-field>
+        <mat-list *ngFor="let payment of payments">
+            <label>Final:</label>
+            <mat-list-item (click)="selectPayment()">
+                {{ payment.cardNumber ? '**** **** **** ' + payment.cardNumber : 'Dinheiro'}}
+                <span><img src="../../../assets/icon/{{payment.typeCard}}.svg"></span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+        </mat-list>
 
         <section>
-            <button mat-raised-button id="mat-register" (click)="onAddress()">Adicionar forma de pagamento</button>
+            <button mat-raised-button id="mat-register" (click)="onAddPayment()">Adicionar forma de pagamento</button>
         </section>
     </form>
 </div>

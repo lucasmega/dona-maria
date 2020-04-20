@@ -12,32 +12,24 @@
     width: 100%;
     color: #fff;
     min-height: 8vh;
+    margin-bottom: 80px;
     background-color: #ee6e73;
 }
 
 form {
-    text-align: end;
-    label {
-        color: #0645ad;
-        margin-bottom: 40px;
+    .mat-list {
+        label {
+            font-size: 15px;
+        }
     }
-    input#visa {
-        background-image: url('../../../assets/icon/visa.svg');
-        background-repeat: no-repeat;
-        background-position: right;
-        height: 30px;
-    }
-    input#mastercard {
-        background-image: url('../../../assets/icon/mastercard.svg');
-        background-repeat: no-repeat;
-        background-position: right;
-        height: 30px;
-    }
-    input#coin {
-        background-image: url('../../../assets/icon/coin.svg');
-        background-repeat: no-repeat;
-        background-position: right;
-        height: 30px;
+    span {
+        position: absolute;
+        right: 30px;
+        img {
+            left: 100%;
+            height: 30px;
+            position: relative;
+        }
     }
 }
 
