@@ -9,16 +9,20 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
+
 /* Core CSS required for Ionic components to work properly */
+
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
+
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
 @import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
+
 @import "~@ionic/angular/css/padding.css";
 @import "~@ionic/angular/css/float-elements.css";
 @import "~@ionic/angular/css/text-alignment.css";
@@ -26,21 +30,15 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 /* System grid bootstrap end angular material */
+
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
-
 @import "./assets/fontawesome-free/css/all.min.css";
-
-// @import "../assets/fontawesome-free/scss/solid.scss";
-// @import "../assets/fontawesome-free/scss/brands.scss";
-// @import "../assets/fontawesome-free/scss/fontawesome.scss";
-
 @font-face {
     font-family: 'comfortaa';
     src: url(./assets/comfortaa/Comfortaa-Regular.ttf) format("truetype");
-  }
+}
 
-  body {
+body {
     font-family: 'comfortaa';
-  }
-
+}

@@ -6,7 +6,7 @@
     </div>
 
     <mat-accordion>
-        <mat-expansion-panel #mepPartner (click)="toogleExpasionPartner()">
+        <mat-expansion-panel #mepPartner (click)="toogleExpasionPartner(mepPartner.expanded)">
             <mat-expansion-panel-header>
                 Informações sobre a domestica
             </mat-expansion-panel-header>
@@ -61,7 +61,7 @@
     </mat-accordion>
 
     <mat-accordion>
-        <mat-expansion-panel #mepReceipt (click)="toogleExpasionReceipt()">
+        <mat-expansion-panel #mepReceipt (click)="toogleExpasionReceipt(mepReceipt.expanded)">
             <mat-expansion-panel-header>
                 Comprovante de pagamento
             </mat-expansion-panel-header>

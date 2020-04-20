@@ -23,8 +23,14 @@ export class ReceiptComponent implements OnInit {
     this.router.navigateByUrl('/solicitation');
   }
 
-  public toogleExpasionReceipt() { }
+  public toogleExpasionReceipt(expanded: boolean) {
+    expanded ? this.mepReceipt.expanded = true : this.mepReceipt.expanded = false;
+    expanded ? this.mepPartner.expanded = false : this.mepPartner.expanded = true;
+  }
 
-  public toogleExpasionPartner() { }
+  public toogleExpasionPartner(expanded: boolean) {
+    expanded ? this.mepPartner.expanded = true : this.mepPartner.expanded = false;
+    expanded ? this.mepReceipt.expanded = false : this.mepReceipt.expanded = true;
+  }
 
 }

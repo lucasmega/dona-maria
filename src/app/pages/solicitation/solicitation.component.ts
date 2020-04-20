@@ -11,9 +11,10 @@ import { UtilService } from 'src/app/service/util.service';
 export class SolicitationComponent implements OnInit {
 
   public foods: any[] = [
-    { value: 'steak-0', viewValue: 'Faxineira' },
-    { value: 'pizza-1', viewValue: 'Cozinheira' },
-    { value: 'tacos-2', viewValue: 'Lavadeira' }
+    { value: '0', viewValue: 'Faxineira' },
+    { value: '1', viewValue: 'Cozinheira' },
+    { value: '2', viewValue: 'Lavadeira' },
+    { value: '3', viewValue: 'Diarista' }
   ];
 
   constructor(private router: Router, private utilService: UtilService) { }
