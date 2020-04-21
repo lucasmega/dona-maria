@@ -8,12 +8,20 @@
     width: 100%;
 }
 
-#mat-register {
+.form-valid {
     width: 100%;
     color: #fff;
     min-height: 8vh;
     margin-bottom: 80px;
     background-color: #ee6e73;
+}
+
+.form-invalid {
+    width: 100%;
+    color: #fff;
+    min-height: 8vh;
+    margin-bottom: 80px;
+    background-color: #c4c4c4;
 }
 
 form {
