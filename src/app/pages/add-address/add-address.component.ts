@@ -1,6 +1,10 @@
 import { Router } from '@angular/router';
-import { FormGroup, FormControl, Validators} from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+
+import { Address } from '../../model/export';
+
+import { UtilService, AddressMockService } from '../../service/export';
 
 @Component({
   selector: 'app-add-address',
@@ -9,12 +13,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddAddressComponent implements OnInit {
 
+  public address = new Address();
+
   public form = new FormGroup({
     cep: new FormControl('', Validators.required),
     numero: new FormControl('', Validators.required)
   });
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private utilService: UtilService, private addressMockService: AddressMockService) { }
 
   ngOnInit() { }
 
@@ -23,7 +29,20 @@ export class AddAddressComponent implements OnInit {
   }
 
   private onSubmit(form: FormGroup) {
-    console.log(form);
+    if (this.address) {
+      this.utilService.cep(this.form.value.cep);
+      this.router.navigateByUrl('/address');
+    }
+  }
+
+  public getAddress(cep: string) {
+    if (cep.length === 8) {
+      this.addressMockService.getAddress(cep).subscribe((address: Address) => {
+        this.address.bairro = address.bairro;
+        this.address.cep = this.form.value.cep;
+        this.address.logradouro = address.logradouro;
+      });
+    }
   }
 
 }

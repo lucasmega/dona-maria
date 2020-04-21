@@ -13,23 +13,23 @@
     <form [formGroup]="form" class="example-form">
         <mat-form-field class="example-full-width">
             <mat-label>CEP:</mat-label>
-            <input type="number" formControlName="cep" matInput>
+            <input type="text" formControlName="cep" (keyup)="getAddress(form.value.cep)" matInput>
         </mat-form-field>
         <label>Esqueceu seu CEP?</label>
 
         <mat-form-field class="example-full-width">
             <mat-label>Rua:</mat-label>
-            <input type="email" disabled matInput>
+            <input type="text" value="{{address.logradouro}}" disabled matInput>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Número:</mat-label>
-            <input type="password" formControlName="numero" matInput>
+            <input type="text" formControlName="numero" matInput>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Bairro:</mat-label>
-            <input type="password" disabled matInput>
+            <input type="text" value="{{address.bairro}}" disabled matInput>
         </mat-form-field>
 
         <section>
