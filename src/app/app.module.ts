@@ -13,12 +13,14 @@ import { PageModule } from './pages/pages.module';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -44,13 +46,15 @@ library.add(fas, far, fab);
   ],
   entryComponents: [],
   imports: [
-    BrowserModule,
     PageModule,
+    BrowserModule,
     MatIconModule,
     MatMenuModule,
+    MatListModule,
     MatInputModule,
     MatButtonModule,
     HttpClientModule,
+    MatDividerModule,
     AppRoutingModule,
     MatSidenavModule,
     FontAwesomeModule,

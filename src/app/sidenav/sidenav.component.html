@@ -1,33 +1,24 @@
 <div id="mySidenav" class="sidenav">
-  <div id="box-user">
-    <div class="row">
-      <div class="col">
-        <label class="txt-fa-star">4.7</label>
-      </div>
-      <div class="col">
-        <i class="fas fa-star"></i>
-      </div>
-    </div>
 
     <div class="row">
-      <div class="col">
-        <i class="far fa-user-circle"><label id="txt-user-circle">Maria da Silva</label></i>
-      </div>
+        <div class="col-4">
+            <span id="user">
+            <img src="../../assets/icon/user.svg">
+          </span>
+        </div>
+        <div class="col-8">
+            <label>Maria da Silva</label>
+        </div>
     </div>
-  </div>
 
-  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-  <a href="#">Solicitações</a>
-  <div class="line"></div>
-  <a href="#">Pagamentos</a>
-  <div class="line"></div>
-  <a href="#">Caixinha</a>
-  <div class="line"></div>
-  <a href="#">Contrato</a>
-  <div class="line"></div>
-  <a href="#">Configuração</a>
-  <div class="line"></div>
-  <a href="#">Ajuda</a>
-  <div class="line"></div>
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+
+    <mat-list *ngFor="let item of items">
+        <mat-list-item (click)="openPage()">
+            <span id="items"><img src="../../../assets/icon/{{item.icon}}.svg"></span> {{ item.item }}
+        </mat-list-item>
+        <mat-divider></mat-divider>
+    </mat-list>
+
 </div>
 <span class="hamburger" (click)="openNav()">&#9776;</span>
