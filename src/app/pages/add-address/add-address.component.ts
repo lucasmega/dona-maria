@@ -4,7 +4,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { Address } from '../../model/export';
 
-import { UtilService, AddressMockService } from '../../service/export';
+import { AddressMockService } from '../../service/export';
 
 @Component({
   selector: 'app-add-address',
@@ -20,7 +20,7 @@ export class AddAddressComponent implements OnInit {
     numero: new FormControl('', Validators.required)
   });
 
-  constructor(private router: Router, private utilService: UtilService, private addressMockService: AddressMockService) { }
+  constructor(private router: Router, private addressMockService: AddressMockService) { }
 
   ngOnInit() { }
 
@@ -30,7 +30,7 @@ export class AddAddressComponent implements OnInit {
 
   private onSubmit(form: FormGroup) {
     if (this.address) {
-      this.utilService.cep(this.form.value.cep);
+      sessionStorage.setItem('cep', this.address.cep);
       this.router.navigateByUrl('/address');
     }
   }

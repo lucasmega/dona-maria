@@ -17,7 +17,7 @@
             </div>
             <form class="example-form">
                 <mat-list *ngFor="let address of adresses">
-                    <mat-list-item (click)="onAddDate()">{{ address.logradouro + ', ' + address.numero + ' - ' + address.localidade}}
+                    <mat-list-item (click)="onAddDate()">{{ address?.logradouro + ', ' + address?.numero + ' - ' + address?.localidade}}
                         <span><img src="../../../assets/icon/pin.svg"></span>
                     </mat-list-item>
                     <mat-divider></mat-divider>
