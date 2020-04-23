@@ -63,12 +63,15 @@ export class AddressComponent implements OnInit, OnDestroy {
     this.adresses.push(this.address);
 
     address = JSON.parse(sessionStorage.getItem('address'));
-    address.forEach(element => {
-      if (element.logradouro !== null && element.logradouro !== undefined) {
-        this.adresses.push(element);
-        sessionStorage.removeItem('address');
-      }
-    });
+
+    if(!isNullOrUndefined(address)) {
+      address.forEach(element => {
+        if (element.logradouro !== null && element.logradouro !== undefined) {
+          this.adresses.push(element);
+          sessionStorage.removeItem('address');
+        }
+      });
+    }
   }
 
 }

@@ -11,16 +11,16 @@
                 <h6>Para quando você precisa?</h6>
             </div>
         </div>
-        <form class="example-form">
+        <form class="date-form">
 
             <mat-form-field>
-                <input matInput [matDatepicker]="dp3" disabled>
+                <input #in matInput [matDatepicker]="dp3" value="{{isFormValid(in.value)}}" disabled>
                 <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
                 <mat-datepicker #dp3 disabled="false"></mat-datepicker>
             </mat-form-field>
 
             <section>
-                <button mat-raised-button id="mat-category" (click)="onConfirmation()">Continuar</button>
+                <button #btn type="button" [disabled]="isDisabled" mat-raised-button (click)="onConfirmation()">Continuar</button>
             </section>
         </form>
     </div>

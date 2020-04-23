@@ -1,34 +1,34 @@
 <div>
-  <div>
-    <app-waze></app-waze>
-  </div>
-  <div>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h2>Solicitação</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <h6>Do que você precisa?</h6>
-        </div>
-      </div>
-      <form class="example-form">
-        <mat-form-field>
-          <mat-label>Categoria:</mat-label>
-          <mat-select>
-            <mat-option *ngFor="let food of foods" [value]="food.value">
-              {{food.viewValue}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-
-        <section>
-          <button mat-raised-button id="mat-category" (click)="onAddress()">Continuar</button>
-          <label>Não encontrou o que precisa?</label>
-        </section>
-      </form>
+    <div>
+        <app-waze></app-waze>
     </div>
-  </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Solicitação</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h6>Do que você precisa?</h6>
+                </div>
+            </div>
+            <form class="example-form">
+                <mat-form-field>
+                    <mat-label>Categoria:</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let food of foods" [value]="food.value" (click)="onChange(food.value)">
+                            {{food.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <section>
+                    <button #btn mat-raised-button [disabled]="isDisabled" id="btn-solicitation" (click)="onAddress()">Continuar</button>
+                    <label>Não encontrou o que precisa?</label>
+                </section>
+            </form>
+        </div>
+    </div>
 </div>

@@ -1,19 +1,7 @@
-.example-form {
+.date-form {
     min-width: 100%;
     max-width: 100%;
     width: 100%;
-}
-
-.example-full-width {
-    width: 100%;
-}
-
-#mat-category {
-    width: 80%;
-    color: #fff;
-    margin-top: 40px;
-    min-height: 8vh;
-    background-color: #ee6e73;
 }
 
 .container {
@@ -33,21 +21,21 @@
             }
         }
     }
-}
-
-section {
-    text-align: center;
-    label {
-        font-size: 15px;
-        color: #0645ad;
-        margin-top: 10px;
-    }
-}
-
-form {
-    text-align: center;
-    .mat-form-field {
-        width: 80%;
+    form {
+        text-align: center;
+        .mat-form-field {
+            width: 80%;
+        }
+        section {
+            text-align: center;
+        }
+        button {
+            width: 80%;
+            color: #fff;
+            margin-top: 40px;
+            min-height: 8vh;
+            background-color: #c4c4c4;
+        }
     }
 }
 
