@@ -17,15 +17,18 @@
             <form class="example-form">
                 <mat-form-field>
                     <mat-label>Categoria:</mat-label>
-                    <mat-select>
-                        <mat-option *ngFor="let food of foods" [value]="food.value" (click)="onChange(food.value)">
-                            {{food.viewValue}}
+                    <mat-select #f [formControl]="form" [errorStateMatcher]="matcher">
+                        <mat-option id="option" *ngFor="let category of categories" [value]="category.value">
+                            {{category.viewValue}}
+                            <span *ngIf="select.panelOpen" id="id-payment">
+                                <label id="payment">{{category.payment}}</label>
+                            </span>
                         </mat-option>
                     </mat-select>
                 </mat-form-field>
 
                 <section>
-                    <button #btn mat-raised-button [disabled]="isDisabled" id="btn-solicitation" (click)="onAddress()">Continuar</button>
+                    <button [disabled]="form.invalid" mat-raised-button [ngClass]="{'form-valid': form.valid, 'form-invalid': form.invalid}" (click)="onAddress()">Continuar</button>
                     <label>Não encontrou o que precisa?</label>
                 </section>
             </form>

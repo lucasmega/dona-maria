@@ -1,47 +1,40 @@
-import { Component, OnInit, ElementRef, AfterContentInit, Renderer2, ViewChild } from '@angular/core';
-import {FormGroup, FormControl } from '@angular/forms';
 
 import { Router } from '@angular/router';
-import { UtilService } from 'src/app/service/util.service';
+import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
+import { Component, OnInit, ElementRef, ViewChild, Renderer2 } from '@angular/core';
+import { MatSelect } from '@angular/material/select';
+
+import {ErrorStateMatcher} from '@angular/material/core';
+
+import { CategoryModel, ErrorStateMatchers } from '../../model/export';
+import { CategoryService, UtilService } from '../../service/export';
 
 @Component({
   selector: 'app-solicitation',
   templateUrl: './solicitation.component.html',
   styleUrls: ['./solicitation.component.scss'],
 })
-export class SolicitationComponent implements OnInit, AfterContentInit  {
+export class SolicitationComponent implements OnInit  {
+  public isPaymentValue = true;
+  public categories: CategoryModel[];
+  public matcher = new ErrorStateMatchers();
 
-  public isDisabled = true;
-  @ViewChild('btn', {static: true}) button: ElementRef;
+  @ViewChild('f', {static: true}) select: MatSelect;
 
-  public foods: any[] = [
-    { value: '0', viewValue: 'Faxineira' },
-    { value: '1', viewValue: 'Cozinheira' },
-    { value: '2', viewValue: 'Lavadeira' },
-    { value: '3', viewValue: 'Diarista' }
-  ];
+  public form = new FormControl('valid', [
+    Validators.required,
+    Validators.pattern('[0-9]+$'),
+  ]);
 
-  constructor(private router: Router, private utilService: UtilService) { }
+  constructor(private router: Router, private utilService: UtilService, private categoryService: CategoryService) { 
+    this.categories = categoryService.getCategories();
+  }
   
   ngOnInit() {
     this.utilService.sidenav(true);
   }
-
-  ngAfterContentInit(): void {
-    this.button.nativeElement.style.backgroundColor = '#c4c4c4';
-  }
-
-  public onAddress() {
+  
+  public onAddress( ) {
     this.router.navigateByUrl('/address');
   }
-
-  public onChange(category: string) {
-    if (category) {
-      this.isDisabled = false;
-      this.button.nativeElement.style.backgroundColor = '#ee6e73';
-    }
-  }
-
-  
-
 }

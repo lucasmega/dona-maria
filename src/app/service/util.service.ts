@@ -8,6 +8,7 @@ export class UtilService {
 
   public emitSidenav = new EventEmitter<boolean>();
   public emitPayment = new EventEmitter<PaymentModel>();
+  public emitCategory = new EventEmitter<string>();
 
   constructor() { }
 
@@ -17,5 +18,9 @@ export class UtilService {
 
   public payment(payment: PaymentModel) {
     this.emitPayment.emit(payment);
+  }
+
+  public category(category: string) {
+    this.emitCategory.emit(category);
   }
 }

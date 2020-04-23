@@ -8,34 +8,51 @@
     width: 100%;
 }
 
-#btn-solicitation {
+.form-valid {
     width: 100%;
     min-height: 8vh;
     color: #fff;
+    background-color: #ee6e73;
 }
 
-.row {
-    .col {
-        text-align: center;
-        h2 {
-            margin-top: 40px;
+.form-invalid {
+    width: 100%;
+    min-height: 8vh;
+    color: #fff;
+    background-color: #c4c4c4;
+}
+
+.container {
+    .row {
+        .col {
+            text-align: center;
+            h2 {
+                margin-top: 40px;
+            }
+            h6 {
+                margin-top: 20px;
+                margin-bottom: 40PX;
+            }
         }
-        h6 {
-            margin-top: 20px;
-            margin-bottom: 40PX;
+    }
+    form {
+        .mat-form-field {
+            min-width: 100%;
+        }
+        section {
+            text-align: center;
+            label {
+                font-size: 15px;
+                color: #0645ad;
+                margin-top: 10px;
+            }
         }
     }
 }
 
-.mat-form-field {
-    min-width: 100%;
-}
-
-section {
-    text-align: center;
-    label {
-        font-size: 15px;
-        color: #0645ad;
-        margin-top: 10px;
+::ng-deep.mat-option {
+    #id-payment {
+        position: absolute;
+        right: 30px;
     }
 }
