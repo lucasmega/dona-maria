@@ -34,7 +34,10 @@ export class SolicitationComponent implements OnInit  {
     this.utilService.sidenav(true);
   }
   
-  public onAddress( ) {
+  public onAddress(value: string) {
+    this.categories.forEach(element => {
+      element.value === value ? this.utilService.category(element.viewValue): null;
+    });
     this.router.navigateByUrl('/address');
   }
 }

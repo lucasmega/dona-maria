@@ -21,6 +21,7 @@ export class UtilService {
   }
 
   public category(category: string) {
+    console.log(category);
     this.emitCategory.emit(category);
   }
 }

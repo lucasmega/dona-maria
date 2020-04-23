@@ -28,7 +28,7 @@
                 </mat-form-field>
 
                 <section>
-                    <button [disabled]="form.invalid" mat-raised-button [ngClass]="{'form-valid': form.valid, 'form-invalid': form.invalid}" (click)="onAddress()">Continuar</button>
+                    <button [disabled]="form.invalid" mat-raised-button [ngClass]="{'form-valid': form.valid, 'form-invalid': form.invalid}" (click)="onAddress(f.value)">Continuar</button>
                     <label>Não encontrou o que precisa?</label>
                 </section>
             </form>
