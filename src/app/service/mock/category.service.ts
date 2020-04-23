@@ -9,21 +9,21 @@ export class CategoryService {
     public categories: CategoryModel[] = [
         {
             value: '0',
-            payment: 12000,
+            payment: 120.00,
             viewValue: 'Faxineira'
         },
         {
             value: '1',
-            payment: 12000,
+            payment: 120.00,
             viewValue: 'Cozinheira'
         }, {
             value: '2',
-            payment: 12000,
+            payment: 120.00,
             viewValue: 'Lavadeira'
         },
         {
             value: '3',
-            payment: 15000,
+            payment: 150.00,
             viewValue: 'Diarista'
         }
     ]

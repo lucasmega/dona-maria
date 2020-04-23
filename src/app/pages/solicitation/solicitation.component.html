@@ -21,7 +21,7 @@
                         <mat-option id="option" *ngFor="let category of categories" [value]="category.value">
                             {{category.viewValue}}
                             <span *ngIf="select.panelOpen" id="id-payment">
-                                <label id="payment">{{category.payment}}</label>
+                                <label id="payment"[innerHTML]="category.payment | currency:'BRL':true"></label>
                             </span>
                         </mat-option>
                     </mat-select>
