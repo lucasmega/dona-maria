@@ -19,8 +19,11 @@ export class AddressComponent implements OnInit, OnDestroy {
 
   constructor(
     private router: Router,
+    private utilService: UtilService,
     private addressService: AddressMockService
-  ) { }
+  ) { 
+    this.utilService.sidenav(true);
+  }
 
   ngOnInit() {
     this.adresses = this.addressService.registered();

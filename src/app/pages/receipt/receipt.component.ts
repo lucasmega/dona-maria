@@ -4,8 +4,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 
 import { MatExpansionPanel } from '@angular/material/expansion';
 
+import { UtilService, ReceiptService } from '../../service/export';
 import { CategoryModel, ReceiptModel, Address } from '../../model/export';
-import { ReceiptService } from '../../service/mock/receipt.service';
 
 @Component({
   selector: 'app-receipt',
@@ -36,7 +36,7 @@ export class ReceiptComponent implements OnInit {
     service: new FormControl({ value: '', disabled: true })
   })
 
-  constructor(private router: Router, private receiptService: ReceiptService) {
+  constructor(private router: Router, private receiptService: ReceiptService, private utilService: UtilService) {
     this.receipt = this.receiptService.getPartner();
     
     this.date = sessionStorage.getItem('date');
@@ -45,6 +45,8 @@ export class ReceiptComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.utilService.sidenav(true);
+    
     this.mepPartner.expanded = true;
     this.mepReceipt.expanded = false;
   }

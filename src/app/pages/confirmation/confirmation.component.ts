@@ -18,7 +18,8 @@ export class ConfirmationComponent implements OnInit {
   public payment = new PaymentModel();
   public category = new CategoryModel();
 
-  constructor(private router: Router, private utilService: UtilService) { 
+  constructor(private router: Router, private utilService: UtilService) {
+    this.utilService.sidenav(true);
     this.utilService.emitPayment.subscribe(payment => this.payment = payment);
   }
 
