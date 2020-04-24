@@ -18,7 +18,7 @@
 
         <mat-form-field class="example-full-width">
             <mat-label>Endereço:</mat-label>
-            <input type="text" disabled matInput>
+            <input type="text" #address?.logradouro disabled matInput>{{ address?.logradouro + ', ' + address?.numero + ' - ' + address?.localidade}}
         </mat-form-field>
 
         <mat-form-field class="example-full-width">

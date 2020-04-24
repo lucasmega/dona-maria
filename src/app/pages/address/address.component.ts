@@ -42,7 +42,8 @@ export class AddressComponent implements OnInit, OnDestroy {
     this.router.navigateByUrl('/add-address');
   }
 
-  public onAddDate() {
+  public onAddDate(address: Address) {
+    sessionStorage.setItem('address', JSON.stringify(address));
     this.router.navigateByUrl('/date');
   }
 
