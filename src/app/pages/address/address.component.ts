@@ -15,7 +15,7 @@ export class AddressComponent implements OnInit, OnDestroy {
 
   public address: Address = new Address();
 
-  public adresses: Address[];
+  public adresses: Address[] = [];
 
   constructor(
     private router: Router,
@@ -23,22 +23,19 @@ export class AddressComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-    this.adresses = [];
-    this.getAddress(sessionStorage.getItem('cep') ? sessionStorage.getItem('cep') : '09941070');
+    this.adresses = this.addressService.registered();
+    this.getAddress(JSON.parse(sessionStorage.getItem('adresses')));
   }
 
   ngOnDestroy(): void {
-    sessionStorage.removeItem('cep');
+    
   }
 
   public onRegister() {
     this.router.navigateByUrl('/solicitation');
   }
 
-  public onAddAddress() {
-    if (this.adresses.length > 0) {
-      sessionStorage.setItem('address', JSON.stringify(this.adresses));
-    }
+  public onAddAddress(address: Address) {
     this.router.navigateByUrl('/add-address');
   }
 
@@ -47,32 +44,8 @@ export class AddressComponent implements OnInit, OnDestroy {
     this.router.navigateByUrl('/date');
   }
 
-  public getAddress(cep: string) {
-    let address: Address[] = [];
-
-    this.addressService.getAddress(cep).subscribe((response: Address) => {
-      this.address.bairro = response.bairro;
-      this.address.cep = response.cep;
-      this.address.complemento = response.complemento;
-      this.address.gia = response.gia;
-      this.address.ibge = response.ibge;
-      this.address.localidade = response.localidade;
-      this.address.logradouro = response.logradouro;
-      this.address.uf = response.uf;
-      this.address.unidade = response.unidade;
-    });
-    this.adresses.push(this.address);
-
-    address = JSON.parse(sessionStorage.getItem('address'));
-
-    if(!isNullOrUndefined(address)) {
-      address.forEach(element => {
-        if (element.logradouro !== null && element.logradouro !== undefined) {
-          this.adresses.push(element);
-          sessionStorage.removeItem('address');
-        }
-      });
-    }
+  public getAddress(address: Address) {
+    address ? this.adresses.push(address): null;
+    sessionStorage.removeItem('adresses');
   }
-
 }

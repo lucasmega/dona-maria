@@ -30,17 +30,17 @@ export class AddAddressComponent implements OnInit {
 
   private onSubmit(form: FormGroup) {
     if (this.address) {
-      sessionStorage.setItem('cep', this.address.cep);
+      this.address.cep = form.value.cep;
+      this.address.numero = form.value.numero;
+      sessionStorage.setItem('adresses', JSON.stringify(this.address));
       this.router.navigateByUrl('/address');
     }
   }
 
   public getAddress(cep: string) {
     if (cep.length === 8) {
-      this.addressMockService.getAddress(cep).subscribe((address: Address) => {
-        this.address.bairro = address.bairro;
-        this.address.cep = this.form.value.cep;
-        this.address.logradouro = address.logradouro;
+      this.addressMockService.getAddress(cep).subscribe((address: Address) => { 
+        this.address = address;
       });
     }
   }
