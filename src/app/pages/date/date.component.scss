@@ -29,7 +29,14 @@
         section {
             text-align: center;
         }
-        button {
+        .form-valid {
+            width: 80%;
+            color: #fff;
+            margin-top: 40px;
+            min-height: 8vh;
+            background-color: #ee6e73;
+        }
+        .form-invalid {
             width: 80%;
             color: #fff;
             margin-top: 40px;

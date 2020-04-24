@@ -11,8 +11,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { NativeDateAdapter, DateAdapter } from '@angular/material';
 
 import { PageRoutingModule } from './pages-routing.module';
+
+import { UserDateAdapter } from '../model/date-adapter.model';
 
 import { DateComponent } from './date/date.component';
 import { WazeComponent } from '../waze/waze.component';
@@ -52,7 +55,8 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
     ConfirmationComponent,
   ],
   providers:[
-    { provide: LOCALE_ID, useValue: 'pt-BR'}
+    { provide: LOCALE_ID, useValue: 'pt-BR'},
+    { provide: DateAdapter, useClass: UserDateAdapter }
   ]
 })
 export class PageModule {}

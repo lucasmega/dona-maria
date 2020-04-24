@@ -12,15 +12,14 @@
             </div>
         </div>
         <form class="date-form">
-
             <mat-form-field>
-                <input #in matInput [matDatepicker]="dp3" value="{{isFormValid(in.value)}}" disabled>
-                <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
-                <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+                <input [formControl]="form" matInput [matDatepicker]="touchUi" disabled>
+                <mat-datepicker-toggle matSuffix [for]="touchUi"></mat-datepicker-toggle>
+                <mat-datepicker touchUi="true" #touchUi disabled="false"></mat-datepicker>
             </mat-form-field>
 
             <section>
-                <button #btn type="button" [disabled]="isDisabled" mat-raised-button (click)="onConfirmation()">Continuar</button>
+                <button type="button" [disabled]="form.invalid" [ngClass]="{'form-valid': form.valid, 'form-invalid': form.invalid}" mat-raised-button (click)="onConfirmation()">Continuar</button>
             </section>
         </form>
     </div>
