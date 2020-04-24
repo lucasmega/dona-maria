@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { PaymentModel } from '../../model/payment.model';
 
 import { UtilService } from '../../service/export';
+import { CategoryModel } from 'src/app/model/export';
 
 @Component({
   selector: 'app-confirmation',
@@ -13,11 +14,15 @@ import { UtilService } from '../../service/export';
 export class ConfirmationComponent implements OnInit {
 
   public payment = new PaymentModel();
+  public category = new CategoryModel()
 
   constructor(private router: Router, private utilService: UtilService) { }
 
   ngOnInit() {
-    this.utilService.emitPayment.subscribe(payment => this.payment);
+    this.utilService.emitPayment.subscribe((payment: PaymentModel) => this.payment);
+    this.category = JSON.parse(sessionStorage.getItem('category'));
+    console.log(typeof this.category.payment);
+
   }
 
   public onDate() {

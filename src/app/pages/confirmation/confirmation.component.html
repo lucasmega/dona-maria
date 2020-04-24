@@ -13,7 +13,7 @@
     <form class="example-form">
         <mat-form-field class="example-full-width">
             <mat-label>Serviço:</mat-label>
-            <input type="text" disabled matInput>
+            <input type="text" #category.viewValue name="category" disabled matInput>{{category.viewValue}}
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
@@ -28,12 +28,12 @@
 
         <mat-form-field class="example-full-width">
             <mat-label>Valor:</mat-label>
-            <input type="number" id="{{payment.cardFlag}}" disabled matInput>
+            <input type="text" id="{{payment.cardFlag}}" #category.payment name="payment" disabled matInput>{{category.payment | currency:'BRL':true}}
         </mat-form-field>
         <label (click)="onPayment()">Alterar forma de pagamento</label>
 
         <section>
-            <button mat-raised-button id="mat-register" (click)="onReceipt()">Confirmar</button>
+            <button type="button" mat-raised-button id="mat-register" (click)="onReceipt()">Confirmar</button>
         </section>
     </form>
 </div>

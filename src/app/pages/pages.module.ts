@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
@@ -50,6 +50,9 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
     AddAddressComponent,
     SolicitationComponent,
     ConfirmationComponent,
+  ],
+  providers:[
+    { provide: LOCALE_ID, useValue: 'pt-BR'}
   ]
 })
 export class PageModule {}

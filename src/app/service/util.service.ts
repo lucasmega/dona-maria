@@ -1,5 +1,6 @@
 import { Injectable, EventEmitter } from '@angular/core';
-import { PaymentModel } from '../model/payment.model';
+
+import { CategoryModel, PaymentModel } from '../model/export';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,6 @@ export class UtilService {
 
   public emitSidenav = new EventEmitter<boolean>();
   public emitPayment = new EventEmitter<PaymentModel>();
-  public emitCategory = new EventEmitter<string>();
 
   constructor() { }
 
@@ -18,10 +18,5 @@ export class UtilService {
 
   public payment(payment: PaymentModel) {
     this.emitPayment.emit(payment);
-  }
-
-  public category(category: string) {
-    console.log(category);
-    this.emitCategory.emit(category);
   }
 }

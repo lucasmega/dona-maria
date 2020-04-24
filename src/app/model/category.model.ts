@@ -6,7 +6,7 @@ export class CategoryModel {
 
     constructor() {
         this.value = '';
-        this.payment = 0;
+        this.payment = 0.0;
         this.viewValue = '';
     }
 }
