@@ -27,9 +27,7 @@ export class AddressComponent implements OnInit, OnDestroy {
     this.getAddress(JSON.parse(sessionStorage.getItem('adresses')));
   }
 
-  ngOnDestroy(): void {
-    
-  }
+  ngOnDestroy(): void { }
 
   public onRegister() {
     this.router.navigateByUrl('/solicitation');

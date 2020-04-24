@@ -24,7 +24,8 @@ export class DateComponent implements OnInit {
     this.router.navigateByUrl('/address');
   }
 
-  public onConfirmation(form: any) {
+  public onConfirmation(date: string) {
+    sessionStorage.setItem('date', date);
     this.router.navigateByUrl('/confirmation');
   }
 
