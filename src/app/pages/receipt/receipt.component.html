@@ -19,7 +19,7 @@
                 </div>
                 <div class="col-8">
                     <div>
-                        <mat-card-title>Faxineira</mat-card-title>
+                        <mat-card-title [innerHTML]="category?.viewValue"></mat-card-title>
                     </div>
                     <div>
                         <mat-card-subtitle>4.78
@@ -33,29 +33,27 @@
 
             <mat-divider></mat-divider>
 
-            <div class="row">
-                <div class="container">
-                    <mat-form-field class="txt-form-field">
-                        <mat-label>Serviço:</mat-label>
-                        <input type="text" matInput>
-                    </mat-form-field>
+            <form [formGroup]="partner">
+                <mat-form-field class="txt-form-field">
+                    <mat-label>Nome:</mat-label>
+                    <input type="text" #receipt.name formControlName="name" matInput>{{receipt.name}}
+                </mat-form-field>
 
-                    <mat-form-field class="txt-form-field">
-                        <mat-label>Endereço:</mat-label>
-                        <input type="text" matInput>
-                    </mat-form-field>
+                <mat-form-field class="txt-form-field">
+                    <mat-label>Sobrenome:</mat-label>
+                    <input type="text" #receipt.lastname formControlName="lastName" matInput>{{receipt.lastname}}
+                </mat-form-field>
 
-                    <mat-form-field class="txt-form-field">
-                        <mat-label>Data:</mat-label>
-                        <input type="text" matInput>
-                    </mat-form-field>
+                <mat-form-field class="txt-form-field">
+                    <mat-label>idade:</mat-label>
+                    <input type="text" #receipt.age formControlName="age" matInput>{{receipt.age}}
+                </mat-form-field>
 
-                    <mat-form-field class="txt-form-field">
-                        <mat-label>Valor:</mat-label>
-                        <input type="number" matInput>
-                    </mat-form-field>
-                </div>
-            </div>
+                <mat-form-field class="txt-form-field">
+                    <mat-label>Código:</mat-label>
+                    <input type="text" #receipt.id formControlName="id" matInput>{{receipt.id}}
+                </mat-form-field>
+            </form>
 
         </mat-expansion-panel>
     </mat-accordion>
@@ -68,25 +66,27 @@
 
             <mat-divider></mat-divider>
 
-            <mat-form-field class="txt-form-field">
-                <mat-label>Serviço:</mat-label>
-                <input type="text" matInput>
-            </mat-form-field>
+            <form [formGroup]="payment">
+                <mat-form-field class="txt-form-field">
+                    <mat-label>Serviço:</mat-label>
+                    <input type="text" #category.viewValue formControlName="service" matInput>{{ category.viewValue }}
+                </mat-form-field>
 
-            <mat-form-field class="txt-form-field">
-                <mat-label>Endereço:</mat-label>
-                <input type="text" matInput>
-            </mat-form-field>
+                <mat-form-field class="txt-form-field">
+                    <mat-label>Endereço:</mat-label>
+                    <input type="text" #address?.logradouro formControlName="address" matInput>{{ address?.logradouro + ', ' + address?.numero + ' - ' + address?.localidade }}
+                </mat-form-field>
 
-            <mat-form-field class="txt-form-field">
-                <mat-label>Data:</mat-label>
-                <input type="text" matInput>
-            </mat-form-field>
+                <mat-form-field class="txt-form-field">
+                    <mat-label>Data:</mat-label>
+                    <input type="text" #date.value formControlName="date" matInput>{{ date }}
+                </mat-form-field>
 
-            <mat-form-field class="txt-form-field">
-                <mat-label>Valor:</mat-label>
-                <input type="number" matInput>
-            </mat-form-field>
+                <mat-form-field class="txt-form-field">
+                    <mat-label>Valor:</mat-label>
+                    <input type="number" #category.payment formControlName="value" matInput>{{ category.payment | currency:'BRL':true }}
+                </mat-form-field>
+            </form>
 
         </mat-expansion-panel>
     </mat-accordion>
