@@ -18,13 +18,14 @@ export class ConfirmationComponent implements OnInit {
   public payment = new PaymentModel();
   public category = new CategoryModel();
 
-  constructor(private router: Router, private utilService: UtilService) { }
+  constructor(private router: Router, private utilService: UtilService) { 
+    this.utilService.emitPayment.subscribe(payment => this.payment = payment);
+  }
 
   ngOnInit() {
     this.date = sessionStorage.getItem('date');
     this.address = JSON.parse(sessionStorage.getItem('address'));
     this.category = JSON.parse(sessionStorage.getItem('category'));
-    this.utilService.emitPayment.subscribe((payment: PaymentModel) => this.payment);
   }
 
   public onDate() {

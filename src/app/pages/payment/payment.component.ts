@@ -28,7 +28,7 @@ export class PaymentComponent implements OnInit {
   }
 
   public selectPayment(payment: PaymentModel) {
-    this.utilService.payment(payment);
+    this.utilService.setPayment(payment);
     this.router.navigateByUrl('/confirmation');
   }
 
