@@ -22,6 +22,7 @@ export class SidenavComponent implements OnInit {
   ngOnInit() { }
 
   public openNav() {
+    sessionStorage.setItem('arrow', JSON.stringify(true))
     document.getElementById('mySidenav').style.width = '100%';
   }
 
@@ -45,10 +46,14 @@ export class SidenavComponent implements OnInit {
       case 'request-completed':
         this.items = this.sidenavService.getRequestsCompleted();
         break;
+      case 'help':
+        this.items = this.sidenavService.getHelp();
+        break;
     }
   }
 
   public navigateByUrl(url: string) {
+    url === 'payment' ? sessionStorage.setItem('arrow', JSON.stringify(false)) : null ;
     this.router.navigateByUrl(`/${url}`);
     this.closeNav();
   }

@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <i class="fas fa-chevron-left" (click)="onDate()"></i>
+        <i *ngIf="isArrow" class="fas fa-chevron-left" (click)="onDate()"></i>
         <div class="col">
             <h4>Forma de pagamento</h4>
         </div>

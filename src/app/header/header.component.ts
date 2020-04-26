@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { UtilService } from '../service/util.service';
 
 @Component({
@@ -12,10 +13,14 @@ export class HeaderComponent implements OnInit {
 
   @Input() activeHeaderOver: boolean;
 
-  constructor(private utilService: UtilService) { }
+  constructor(private router: Router, private utilService: UtilService) { }
 
   ngOnInit() {
     this.utilService.emitSidenav.subscribe(flag => this.isSidenav = flag);
+  }
+
+  public onCategory() {
+    this.router.navigateByUrl('category');
   }
 
 

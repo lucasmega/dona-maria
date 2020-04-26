@@ -1,3 +1,4 @@
+export { HelpModel } from './help.model';
 export { Address } from './address.model';
 export { ReceiptModel } from './receipt.model';
 export { PaymentModel } from './payment.model';

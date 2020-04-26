@@ -12,12 +12,17 @@ import { UtilService, PaymentMockService} from '../../service/export';
 export class PaymentComponent implements OnInit {
 
   public payments: PaymentModel[];
+  public isArrow: true;
 
   constructor(private router: Router, private paymentMockService: PaymentMockService, private utilService: UtilService) {
+    this.utilService.sidenav(true);
     this.payments = this.paymentMockService.getPayment();
   }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    this.isArrow = JSON.parse(sessionStorage.getItem('arrow'));
+    console.log(this.isArrow);
+  }
 
   public onDate() {
     this.router.navigateByUrl('/confirmation');
