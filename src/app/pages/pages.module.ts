@@ -24,7 +24,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { AddressComponent } from './address/address.component';
 import { AddPaymentComponent } from './add-payment/add-payment.component';
 import { AddAddressComponent } from './add-address/add-address.component';
-import { SolicitationComponent } from './solicitation/solicitation.component';
+import { CategoryComponent } from './category/category.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 @NgModule({
@@ -49,9 +49,9 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
     PaymentComponent,
     AddressComponent,
     ReceiptComponent,
+    CategoryComponent,
     AddPaymentComponent,
     AddAddressComponent,
-    SolicitationComponent,
     ConfirmationComponent,
   ],
   providers:[

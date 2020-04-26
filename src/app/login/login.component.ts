@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   }
 
   public onCategories() {
-    this.router.navigateByUrl('/solicitation');
+    this.router.navigateByUrl('/category');
   }
 
 }

@@ -14,8 +14,8 @@
     <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
 
     <mat-list *ngFor="let item of items">
-        <mat-list-item (click)="openPage()">
-            <span id="items"><img src="../../../assets/icon/{{item.icon}}.svg"></span> {{ item.item }}
+        <mat-list-item (click)="openPage(item)">
+            <span id="items"><img src="../../../assets/icon/{{item.icon}}.svg"></span> {{ item.item ? item.item : item.address + ' - ' + item.date }}
         </mat-list-item>
         <mat-divider></mat-divider>
     </mat-list>

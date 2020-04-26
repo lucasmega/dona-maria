@@ -8,12 +8,12 @@ import { AddressComponent } from './address/address.component';
 import { AddPaymentComponent } from './add-payment/add-payment.component';
 import { AddAddressComponent } from './add-address/add-address.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
-import { SolicitationComponent } from './solicitation/solicitation.component';
+import { CategoryComponent } from './category/category.component';
 
 const routes: Routes = [
   {
-    path: 'solicitation',
-    component: SolicitationComponent
+    path: 'category',
+    component: CategoryComponent
   },
   {
     path: 'address',

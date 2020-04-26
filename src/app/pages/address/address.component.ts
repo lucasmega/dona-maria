@@ -33,7 +33,7 @@ export class AddressComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void { }
 
   public onRegister() {
-    this.router.navigateByUrl('/solicitation');
+    this.router.navigateByUrl('/category');
   }
 
   public onAddAddress(address: Address) {

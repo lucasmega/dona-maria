@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { SideNavModel } from '../model/export';
+import { Router } from '@angular/router';
 
-import { SidenavService } from '../service/mock/sidenav.service';
+import { SideNavModel } from '../model/export';
+import { SidenavService} from '../service/export';
 
 
 @Component({
@@ -12,9 +13,9 @@ import { SidenavService } from '../service/mock/sidenav.service';
 export class SidenavComponent implements OnInit {
 
   public showFiller = false;
-  public items: SideNavModel[] = [];
+  public items: any[] = [];
 
-  constructor(private sidenavService: SidenavService) {
+  constructor(private router: Router, private sidenavService: SidenavService) {
     this.items = this.sidenavService.getItems();
   }
 
@@ -26,8 +27,30 @@ export class SidenavComponent implements OnInit {
 
   public closeNav() {
     document.getElementById('mySidenav').style.width = '0';
+    this.items = this.sidenavService.getItems();
   }
 
-  public openPage() { }
+  public openPage(item: SideNavModel) { 
+    item.page ? this.navigateByUrl(item.menu) : this.reloadSideNav(item.menu);
+  }
+
+  public reloadSideNav(menu: string) {
+    switch(menu) {
+      case 'solicitation':
+        this.items = this.sidenavService.getFilterRequest();
+        break;
+      case 'request-in-progress':
+        this.items = this.sidenavService.getRequestsInProgress();
+        break;
+      case 'request-completed':
+        this.items = this.sidenavService.getRequestsCompleted();
+        break;
+    }
+  }
+
+  public navigateByUrl(url: string) {
+    this.router.navigateByUrl(`/${url}`);
+    this.closeNav();
+  }
 
 }

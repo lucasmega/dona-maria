@@ -14,7 +14,7 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'solicitation',
+    path: 'category',
     loadChildren: './pages/pages-routing.module#PageRoutingModule'
   },
   {

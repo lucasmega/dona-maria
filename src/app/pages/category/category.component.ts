@@ -10,11 +10,11 @@ import { CategoryModel, ErrorStateMatchers } from '../../model/export';
 import { CategoryService, UtilService } from '../../service/export';
 
 @Component({
-  selector: 'app-solicitation',
-  templateUrl: './solicitation.component.html',
-  styleUrls: ['./solicitation.component.scss'],
+  selector: 'app-category',
+  templateUrl: './category.component.html',
+  styleUrls: ['./category.component.scss'],
 })
-export class SolicitationComponent implements OnInit {
+export class CategoryComponent implements OnInit {
   public isPaymentValue = true;
   public categories: CategoryModel[];
   public matcher = new ErrorStateMatchers();

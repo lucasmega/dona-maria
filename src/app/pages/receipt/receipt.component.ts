@@ -52,7 +52,7 @@ export class ReceiptComponent implements OnInit {
   }
 
   public onConclude() {
-    this.router.navigateByUrl('/solicitation');
+    this.router.navigateByUrl('/category');
   }
 
   public toogleExpasionReceipt(expanded: boolean) {

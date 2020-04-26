@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
   }
 
   public onCategory() {
-    this.router.navigateByUrl('/solicitation');
+    this.router.navigateByUrl('/category');
   }
 
 }
